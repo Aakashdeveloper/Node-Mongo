@@ -1,0 +1,23 @@
+{
+  "name": "hello_world",
+  "version": "0.0.0",
+  "description": "testing app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aakashdeveloper/node-mongo.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Aakashdeveloper/node-mongo/issues"
+  },
+  "dependencies": {
+    "mongodb": "~2.1.7",
+    "consolidate": "~0.14.0",
+    "express": "~4.13.4"
+  }
+}

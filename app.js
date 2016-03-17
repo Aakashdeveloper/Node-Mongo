@@ -1,3 +1,4 @@
+/* http use
 var http = require('http');
 
 var server = http.createServer(function (req, res){
@@ -9,3 +10,8 @@ var server = http.createServer(function (req, res){
 
 server.listen(8000);
 console.log("Server running  at http://localhost:8000");
+*/
+
+var express = require('express'),
+	con = require('consolidate'),
+	mongodb = require('mongodb');
