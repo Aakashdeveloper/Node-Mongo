@@ -81,7 +81,7 @@ var server = app.listen(3000, function(){
 * */
 
 /* get request*/
-var express = require('express'),
+/*var express = require('express'),
 	app = express(),
 	engines = require('consolidate');
 	
@@ -116,10 +116,64 @@ app.get('/:name', function(req, res, next){
 });
 
 app.listen(3000);
+*/
+
+var express = require('express'),
+	app = express(),
+	engines = require('consolidate'),
+	MongoClient = require('mongodb').MongoClient,
+	assert = require('assert');
+	
+app.engine('html', engines.nunjucks);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
+
+/*MongoClient.connect('mongodb://localhost:27017/crunchbase', function(err,db){
+	assert.equal(null, err);
+	
+		var query = {"category_code":"biotech"}
+		db.collection('companies').find(query).limit(10).toArray(function(err, docs){
+			
+			assert.equal(err, null);
+			assert.notEqual(docs.length, 0);
+			
+			docs.forEach(function(doc){
+				console.log(doc.name+"is a"+ doc.category_code + "company");			
+			
+			});
+			
+			db.close();
+		});	
 
 
+});
 
+*/
 
+/***********Using cursor****************/
+
+MongoClient.connect('mongodb://localhost:27017/crunchbase', function(err,db){
+	assert.equal(null, err);
+	
+		var query = {"category_code":"biotech"};
+		var cursor = db.collection('companies').find(query).limit(10);
+		
+		cursor.forEach(
+			function(doc){
+				console.log(doc.name+"is a"+ doc.category_code + "company");	
+			
+			},
+			function(err){
+				assert.equal(err, null);
+			    return db.close();
+			
+			}
+		);
+						
+			
+			});
+
+			
 
 
 
