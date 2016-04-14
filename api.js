@@ -1,4 +1,5 @@
 var express = require("express"),
+<<<<<<< HEAD
 	mongoose = require("mongoose");
 	
 var db = mongoose.connect('mongodb://localhost/bookApi');
@@ -30,3 +31,21 @@ app.get('/', function(req, res){
 app.listen(port, function(){
 	console.log("server running on port" +port);
 });
+=======
+    gulp = require("gulp"),
+    nodemon = require('gulp-nodemon");
+    
+gulp.task['default', function(){
+	        nodemon({
+			script: "app.js",
+			ext: "js",
+			env:{
+				PORT:8000
+			},
+			ignore: ['/node_modules/..']
+		});
+		.on('restart', function(){
+				console.log("restart");
+		});
+}];
+>>>>>>> 66acb6304f36a586b5399d1396fe539a86317093
