@@ -18,7 +18,7 @@ bookRouter = require('./routes/routes')(Book);
 
 
 
-app.use('/app', bookRouter);
+app.use('/app/books', bookRouter);
 	
 app.get('/', function(req, res){
 	res.send("testing");
