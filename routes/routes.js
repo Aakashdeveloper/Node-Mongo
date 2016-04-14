@@ -1,19 +1,9 @@
-var express = require("express"),
-	mongoose = require("mongoose");
-	bodyParser = require("body-parsers");
+var express = require('express');
+
+var routes = function(){
+	var bookRouter = express.Router();
 	
-var db = mongoose.connect('mongodb://localhost/bookApi');
-
-var Book = require('./model/bookModel');
-
-var app = express();
-var port = 3000;
-
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-var bookRouter = express.Router();
-
-bookRouter.route('/Books')
+	bookRouter.route('/Books')
 /*post value*/
     .post(function(req,res){
 		var book = new Book(req.body);
@@ -48,17 +38,9 @@ bookRouter.route('/Books/:bookId')
 				res.json(book);	
 		});
 	});
-
-
-
-app.use('/app', bookRouter);
 	
-app.get('/', function(req, res){
-	res.send("testing");
-	
-});
+	return bookRouter;
+};
 
-app.listen(port, function(){
-	console.log("server running on port" +port);
-});
 
+module.exports = routes;
