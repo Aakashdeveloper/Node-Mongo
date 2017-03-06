@@ -1,0 +1,9 @@
+Step For PACKAGE Json
+1) NPM INSTALL
+2) Hit enter and add details
+3) Enter Yes to complete the process
+
+
+Step to install modules
+1)npm install --save body-parser
+

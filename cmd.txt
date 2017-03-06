@@ -1,0 +1,48 @@
+mongod 
+
+use admin
+db.createUser(
+	{
+		user:"siteUserAdmin",
+		pwd:"password",
+		roles:[{role:"userAdminAnyDatabase",db:"admin"}]
+	}
+)
+db.system.users.find().pretty()
+
+
+use records
+db.createUser(
+	{
+		user:"siteUserAdmin",
+		pwd:"password",
+		roles:[{role:"userAdmin",db:"admin"}]
+	}
+)
+db.system.users.find().pretty()
+
+> show collections
+> db
+records
+> db.records.find()
+
+
+use records
+db.createUser(
+	{
+		user:"reportUser",
+		pwd:"123456",
+		roles:[{role:"read",db:"reporting"},
+		{role:"read",db:"product"},
+		{role:"readWrite",db:"sale"}]
+	}
+)
+
+use records
+db.createUser(
+	{
+		user:"reportUser",
+		pwd:"123456",
+		roles:["root"]
+	}
+)

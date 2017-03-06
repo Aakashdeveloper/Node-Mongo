@@ -16,8 +16,16 @@
     "url": "https://github.com/Aakashdeveloper/node-mongo/issues"
   },
   "dependencies": {
-    "mongodb": "~2.1.7",
+    "body-parser": "^1.15.0",
     "consolidate": "~0.14.0",
-    "express": "~4.13.4"
+    "express": "~4.13.4",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
+    "mongodb": "~2.1.7",
+    "mongoose": "^4.4.12",
+    "nodemon": "^1.9.1",
+    "request": "^2.74.0",
+    "vash": "^0.11.3"
   }
 }

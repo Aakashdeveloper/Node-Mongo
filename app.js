@@ -1,4 +1,4 @@
-/*
+
 var http = require('http');
 
 var server = http.createServer(function (req, res){
@@ -7,11 +7,18 @@ var server = http.createServer(function (req, res){
 	
 	
 });
-
+ 
 server.listen(8000);
 console.log("Server running  at http://localhost:8000");
 
 
+
+
+
+
+
+
+/*
 var express = require('express'),
 	con = require('consolidate'),
 	mongodb = require('mongodb');
@@ -65,11 +72,11 @@ MongoClient.connect('mongodb://localhost:27017/video', function(err,db){
 	});
 });
 
-/*app.get('/', function(req, res){
+app.get('/', function(req, res){
 	res.render('hello', {'name' :'Templates' })
 	
 });
-*/
+
 
 /* server connect
 var server = app.listen(3000, function(){
@@ -116,7 +123,7 @@ app.get('/:name', function(req, res, next){
 });
 
 app.listen(3000);
-*/
+*
 
 var express = require('express'),
 	app = express(),
@@ -150,7 +157,7 @@ app.set('views', __dirname + '/views');
 
 */
 
-/***********Using cursor****************/
+/***********Using cursor***************
 
 MongoClient.connect('mongodb://localhost:27017/crunchbase', function(err,db){
 	assert.equal(null, err);

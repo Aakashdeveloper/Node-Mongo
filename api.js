@@ -1,13 +1,18 @@
 var express = require("express"),
 	mongoose = require("mongoose");
 	
-var db = mongoose.connect('mongodb://localhost/bookApi');
+var db = mongoose.connect('mongodb://localhost/login');
 
-var Book = require('./model/bookModel');
+var Book = require('./models/bookModel');
 
 var app = express();
-var port = 3000;
-
+var port = 8000;
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
+  next();
+});
 var bookRouter = express.Router();
 
 bookRouter.route('/Books')
@@ -25,7 +30,7 @@ bookRouter.route('/Books')
 				res.json(books);	
 		});
 	});
-#for particluar field(id)
+//for particluar field(id)
 
 bookRouter.route('/Books/:bookId')
 	.get(function(req, res){
@@ -41,7 +46,8 @@ bookRouter.route('/Books/:bookId')
 
 
 app.use('/app', bookRouter);
-	
+
+
 app.get('/', function(req, res){
 	res.send("testing");
 	

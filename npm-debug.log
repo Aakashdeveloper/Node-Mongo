@@ -1,0 +1,74 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'bodyParser',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'bodyParser', null ]
+7 verbose cache add name=undefined spec="bodyParser" args=["bodyParser",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'bodyParser',
+8 verbose parsed url   path: 'bodyParser',
+8 verbose parsed url   href: 'bodyParser' }
+9 silly lockFile caa4c3c7-bodyParser bodyParser
+10 verbose lock bodyParser C:\Users\AAKASH\AppData\Roaming\npm-cache\caa4c3c7-bodyParser.lock
+11 silly lockFile caa4c3c7-bodyParser bodyParser
+12 silly lockFile caa4c3c7-bodyParser bodyParser
+13 verbose addNamed [ 'bodyParser', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile e0b6bd45-bodyParser bodyParser@
+16 verbose lock bodyParser@ C:\Users\AAKASH\AppData\Roaming\npm-cache\e0b6bd45-bodyParser.lock
+17 silly addNameRange { name: 'bodyParser', range: '*', hasData: false }
+18 verbose request where is /bodyParser
+19 verbose request registry https://registry.npmjs.org/
+20 verbose request id 6f9c3bd1e5f44e9c
+21 verbose url raw /bodyParser
+22 verbose url resolving [ 'https://registry.npmjs.org/', './bodyParser' ]
+23 verbose url resolved https://registry.npmjs.org/bodyParser
+24 verbose request where is https://registry.npmjs.org/bodyParser
+25 info trying registry request attempt 1 at 22:28:56
+26 http GET https://registry.npmjs.org/bodyParser
+27 http 404 https://registry.npmjs.org/bodyParser
+28 silly registry.get cb [ 404,
+28 silly registry.get   { 'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '2',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     date: 'Thu, 14 Apr 2016 16:58:58 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-sin6924-SIN',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1460653137.904696,VS0,VE217',
+28 silly registry.get     vary: 'Accept-Encoding' } ]
+29 silly lockFile e0b6bd45-bodyParser bodyParser@
+30 silly lockFile e0b6bd45-bodyParser bodyParser@
+31 error 404 Not Found
+31 error 404
+31 error 404 'bodyParser' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404 It was specified as a dependency of 'hello_world'
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Windows_NT 6.2.9200
+33 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "bodyParser" "--save"
+34 error cwd C:\Users\AAKASH\Desktop\node-mongo
+35 error node -v v0.10.36
+36 error npm -v 1.4.28
+37 error code E404
+38 verbose exit [ 1, true ]
